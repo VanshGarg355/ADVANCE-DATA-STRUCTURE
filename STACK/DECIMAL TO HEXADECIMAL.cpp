@@ -40,9 +40,15 @@ int main()
         st.push(rem);
         i = i / 16;
     }
-    while (!st.isempty()) {
+
+   while (!st.isempty()) {
         int x = st.pop();
-        cout << x << endl;
+
+        if (x < 10)
+            cout << x;
+        else
+            cout << char('A' + (x - 10));
     }
+
     return 0;
 }
