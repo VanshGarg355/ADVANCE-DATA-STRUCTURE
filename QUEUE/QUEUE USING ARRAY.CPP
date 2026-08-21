@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Array Insertion
 void ArrayInsertion(vector<int>& arr, int i, int x) {
 
     int n = arr.size();
@@ -15,7 +14,6 @@ void ArrayInsertion(vector<int>& arr, int i, int x) {
     arr[i] = x;
 }
 
-// Array Deletion
 int ArrayDeletion(vector<int>& arr, int i) {
 
     int n = arr.size();
@@ -36,13 +34,11 @@ int ArrayDeletion(vector<int>& arr, int i) {
     return x;
 }
 
-// EnQueue
 void EnQueue(vector<int>& arr, int x) {
 
     ArrayInsertion(arr, arr.size(), x);
 }
 
-// DeQueue
 int DeQueue(vector<int>& arr) {
 
     if (arr.size() == 0) {
@@ -53,7 +49,6 @@ int DeQueue(vector<int>& arr) {
     return ArrayDeletion(arr, 0);
 }
 
-// Display
 void Display(vector<int>& arr) {
 
     for (int i = 0; i < arr.size(); i++) {
@@ -67,7 +62,6 @@ int main() {
 
     vector<int> arr;
 
-    // EnQueue
     EnQueue(arr, 10);
     EnQueue(arr, 20);
     EnQueue(arr, 30);
@@ -76,7 +70,6 @@ int main() {
     cout << "Queue after EnQueue: ";
     Display(arr);
 
-    // DeQueue
     int x = DeQueue(arr);
 
     cout << "Deleted Element: " << x << endl;
@@ -84,13 +77,11 @@ int main() {
     cout << "Queue after DeQueue: ";
     Display(arr);
 
-    // Array Insertion
     ArrayInsertion(arr, 1, 50);
 
     cout << "After Array Insertion: ";
     Display(arr);
 
-    // Array Deletion
     x = ArrayDeletion(arr, 2);
 
     cout << "Deleted Element: " << x << endl;
