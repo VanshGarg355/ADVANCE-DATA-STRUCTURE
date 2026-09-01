@@ -114,4 +114,4 @@ int main() {
     cout << "Deleted from rear: " << DelRear(front, rear) << endl;
 
     return 0;
-}E
+}
