@@ -6,5 +6,7 @@ int power(int a ,int n){
     else return a*power(a,n-1);
 }
 int main(){
-
+cout<<power(2,3)<<endl;
 }
+
+
