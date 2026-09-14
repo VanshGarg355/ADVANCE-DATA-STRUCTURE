@@ -147,6 +147,81 @@ void DiffArray(vector<int> a, vector<int> b)
     cout << endl;
 }
 
+// B - A
+void DiffArray2(vector<int> a, vector<int> b)
+{
+    int i = 0;
+    int j = 0;
+
+    while (i < a.size() && j < b.size())
+    {
+        if (a[i] < b[j])
+        {
+            i++;
+        }
+        else if (b[j] < a[i])
+        {
+            cout << b[i] << " ";
+
+            j++;
+        }
+        else
+        {
+            i++;
+            j++;
+        }
+    }
+
+    while (i < a.size())
+    {
+        cout << a[i] << " ";
+        i++;
+    }
+
+    cout << endl;
+}
+
+// B symmetric diff B
+void SymmetricDiffArray(vector<int> a, vector<int> b)
+{
+    int i = 0;
+    int j = 0;
+
+    while (i < a.size() && j < b.size())
+    {
+        if (a[i] < b[j])
+        {
+            cout << a[i] << " ";
+
+            i++;
+        }
+        else if (b[j] < a[i])
+        {
+            cout << b[i] << " ";
+
+            j++;
+        }
+        else
+        {
+            i++;
+            j++;
+        }
+    }
+
+    while (i < a.size())
+    {
+        cout << a[i] << " ";
+        i++;
+    }
+
+    while (i < b.size())
+    {
+        cout << b[i] << " ";
+        j++;
+    }
+    cout << endl;
+}
+
 int main()
 {
     vector<int> a = {1, 2, 3, 5, 9, 34};
@@ -163,6 +238,12 @@ int main()
 
     cout << "Difference A-B :" << endl;
     DiffArray(a, b);
+
+    cout << "Difference B-A :" << endl;
+    DiffArray2(a, b);
+
+    cout << "Symmetric Difference :" << endl;
+    SymmetricDiffArray(a, b);
 
     return 0;
 }
